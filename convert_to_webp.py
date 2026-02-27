@@ -38,7 +38,7 @@ except ImportError:
 # 設定（案件ごとにここを変更する）
 # ============================================================
 
-PROJECT_NAME = "THE-CORNER-CAFE"
+PROJECT_NAME = "THE-CORNER-CAFE_v3"
 IMAGES_DIR   = Path(f"output/{PROJECT_NAME}/assets/images")
 HTML_PATH    = Path(f"output/{PROJECT_NAME}/index.html")
 

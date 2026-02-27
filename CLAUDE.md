@@ -135,6 +135,11 @@ Phase 9  最終組み立て（自分）→ output/
 - セクション構成の変更（変更提案はメモとして添えてよいが従う必要はない）
 - デザイン・レイアウト・CSSの指定
 
+**【完了後チェック】禁止ワードの自動確認（自分で実行）:**
+Phase 3 完了後、Phase 4 に入る前に `03_copy.md` に禁止ワードが含まれていないことを確認する。
+禁止ワードは `03_copy.md` の冒頭に「禁止ワード」として記載されているはず。
+もし含まれていれば、ライター役に差し替えを依頼してから次に進む。
+
 ---
 
 ### Phase 4 — UI/UXデザイナー（Task ツール）
@@ -170,10 +175,14 @@ Phase 9  最終組み立て（自分）→ output/
 完全な HTML を作成する:
 - セマンティックHTML5（header / nav / main / section / footer）
 - **FLOCSS命名規則**のクラス名（後述）
-- `03_copy.md` のコピーをそのまま使用（一字も変えない）
+- `03_copy.md` のコピーをそのまま使用（**一字も変えない・一字も追加しない**）
 - `04_ux.md` のクラス名・構造を忠実に反映
 - `assets/css/styles.css` と `assets/js/script.js` をリンク
 - フォームは `php/form_handler.php` へ POST
+- フォームの `<select>` や `<input>` の `name`/`value` 属性はバックエンドの処理と必ず一致させること
+
+> **コピー追加禁止:** `03_copy.md` に存在しないテキストを HTML に独自追加することは禁止。
+> どうしても必要な場合はコメントアウトで提案し、Phase 9 のオーケストレーターに判断を委ねる。
 
 **【必須】画像マニフェストを HTML 末尾のコメントに出力する:**
 `<img src>` で参照する全画像ファイルを `</html>` 直前に列挙すること。
@@ -188,6 +197,10 @@ concept-02.jpg 4:3 コンセプトセクション画像2
 -->
 </html>
 ```
+
+**【Phase 5 完了後・Phase 6 前に必ず実行】generate_images.py の即時更新（自分で実行）:**
+HTMLデザイナーが確定した IMAGE_MANIFEST のファイル名で `generate_images.py` の IMAGES リストを更新する。
+Phase 6 以降でファイル名が変わることはないため、ここで一致させておけば Phase 9 の照合が不要になる。
 
 ---
 
@@ -204,6 +217,14 @@ concept-02.jpg 4:3 コンセプトセクション画像2
 
 **フロントエンドエンジニア** (`workspace/06_script.js`)
 - `workspace/05_index.html` の構造・クラス名・data属性に完全一致するセレクターを使うこと
+- **プロンプトには HTML で使われている全 js- クラス・ID・data属性の一覧表を必ず貼り付けること**
+  （例: `#header`, `.js-hamburger`, `#js-nav`, `.js-scroll-to`, `.js-reveal`, `.js-tab[data-target]`,
+  `.js-accordion`, `.js-contact-form`, `.js-submit-btn`, `#form-success`, `#form-error`,
+  `#modal-privacy`, `.js-privacy-open`, `.js-modal-close` 等）
+- `document.querySelector` / `getElementById` のセレクターは HTML と厳密に一致させる
+  （クラスセレクター `.foo` と ID セレクター `#foo` の混同禁止）
+- 動的な要素の表示・非表示は `hidden` 属性か `style.display` のどちらかに統一すること
+  （両方の混用禁止。モーダルと通常要素で方式が分かれないよう注意）
 - バニラJS（ES6+、ライブラリなし）
 - ハンバーガーメニュー・スムーズスクロール・スクロールリビール
 - フォームバリデーション・送信処理・Honeypot
@@ -211,6 +232,8 @@ concept-02.jpg 4:3 コンセプトセクション画像2
 **バックエンドエンジニア** (`workspace/06_form_handler.php`)
 - フォームハンドラー（セキュリティ・ログ・メール送信）
 - CLAUDE.md のフォームセキュリティ要件を全て実装
+- **プロンプトには HTML フォームの全フィールド（`name` 属性・`value` 選択肢）を必ず貼り付けること**
+  （`$allowed_types` 等のホワイトリストは HTML の `value` 属性と厳密に一致させる）
 
 ---
 
@@ -219,6 +242,7 @@ concept-02.jpg 4:3 コンセプトセクション画像2
 `workspace/05_index.html` を強化して `workspace/07_seo.html` を作成:
 - タイトル・メタディスクリプション・OGP・Twitter Card
 - JSON-LD構造化データ（CafeOrRestaurant・FAQPage・WebSite）
+  - **営業時間・定休日を `01_spec.md` から正確に読み取り、定休日は `dayOfWeek` から必ず除外すること**
 - h1が1つ、見出し階層が正しいことを確認
 - skip ナビ・aria-label・画像の alt/width/height
 
@@ -343,6 +367,12 @@ Utility     : u-mt-16 / u-text-center / u-hidden        （プレフィックス
 ### クラス名整合性ルール（Phase 5〜6 必須）
 HTMLデザイナーが確定させたクラス名が「唯一の真実」。
 CSS・JSはそのクラス名に合わせる。クラス名の変更は HTML 側で行う。
+
+### 動的表示切替の統一ルール（Phase 5〜6 必須）
+要素の動的な表示・非表示は **`style="display:none"` + JS で `style.display = 'block'`** に統一する。
+- `hidden` 属性と `style.display` の混用禁止（CSS `[hidden]` との競合で表示されないバグが発生する）
+- モーダルのみ例外として `hidden` 属性 + `removeAttribute('hidden')` を使ってよい
+- HTML 側と JS 側で方式が分かれないよう Phase 5 と Phase 6 フロントエンドで必ず合わせること
 
 ### フォームセキュリティ（必須）
 入力フォームが1つでもある場合、以下を**全て実装**すること:

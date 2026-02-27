@@ -47,7 +47,7 @@ except ImportError:
 # 設定（案件ごとにここを変更する）
 # ============================================================
 
-PROJECT_NAME = "THE-CORNER-CAFE"
+PROJECT_NAME = "THE-CORNER-CAFE_v3"
 OUTPUT_DIR   = Path(f"output/{PROJECT_NAME}/assets/images")
 
 MODEL       = "imagen-4.0-generate-001"
@@ -94,22 +94,9 @@ IMAGES = [
         ),
     },
 
-    # ── コンセプト ──────────────────────────────────────────
-    {
-        "filename": "concept.jpg",
-        "aspect_ratio": "4:3",
-        "prompt": (
-            "Close-up of experienced barista hands carefully inspecting "
-            "roasted coffee beans in wooden scoop, "
-            "coffee roasting equipment in soft background, "
-            "artisan craft feel, warm studio lighting. "
-            + BRAND_STYLE
-        ),
-    },
-
     # ── コーヒーメニュー ────────────────────────────────────
     {
-        "filename": "coffee-01.jpg",
+        "filename": "menu-signature.jpg",
         "aspect_ratio": "4:3",
         "prompt": (
             "Classic hand-drip coffee in matte ceramic mug on wooden table, "
@@ -119,7 +106,17 @@ IMAGES = [
         ),
     },
     {
-        "filename": "coffee-02.jpg",
+        "filename": "menu-deep.jpg",
+        "aspect_ratio": "4:3",
+        "prompt": (
+            "Deep roast espresso in small espresso cup, "
+            "dark rich crema on top, intense coffee aroma, "
+            "moody dark background, dramatic lighting. "
+            + BRAND_STYLE
+        ),
+    },
+    {
+        "filename": "menu-single.jpg",
         "aspect_ratio": "4:3",
         "prompt": (
             "Single origin pour-over coffee in glass server, "
@@ -129,7 +126,7 @@ IMAGES = [
         ),
     },
     {
-        "filename": "coffee-03.jpg",
+        "filename": "menu-latte.jpg",
         "aspect_ratio": "4:3",
         "prompt": (
             "Cafe latte in large white ceramic cup, "
@@ -139,19 +136,61 @@ IMAGES = [
         ),
     },
     {
-        "filename": "coffee-04.jpg",
+        "filename": "menu-float.jpg",
         "aspect_ratio": "4:3",
         "prompt": (
-            "Specialty filter coffee in transparent glass cup, "
-            "golden translucent color showing clarity, "
-            "minimalist presentation on marble surface. "
+            "Coffee float in tall glass, vanilla ice cream scoop melting "
+            "into iced coffee below, straw, wooden cafe table, "
+            "summer seasonal drink presentation. "
+            + BRAND_STYLE
+        ),
+    },
+    {
+        "filename": "menu-au-lait.jpg",
+        "aspect_ratio": "4:3",
+        "prompt": (
+            "Cafe au lait in large white ceramic bowl or cup, "
+            "creamy milky coffee, gentle steam, "
+            "cozy morning breakfast atmosphere. "
             + BRAND_STYLE
         ),
     },
 
     # ── スイーツメニュー ────────────────────────────────────
     {
-        "filename": "sweets-01.jpg",
+        "filename": "sweets-gateau.jpg",
+        "aspect_ratio": "4:3",
+        "prompt": (
+            "Gateau au chocolat slice on white ceramic plate, "
+            "dense rich chocolate cake with burnt butter aroma, "
+            "light dusting of powdered sugar on top, "
+            "rustic wooden table, dessert fork beside. "
+            + BRAND_STYLE
+        ),
+    },
+    {
+        "filename": "sweets-lemon.jpg",
+        "aspect_ratio": "4:3",
+        "prompt": (
+            "Lemon cream cheese tart on white ceramic plate, "
+            "glossy lemon curd on smooth cream cheese filling, "
+            "flaky golden pastry shell, food styling, "
+            "fresh lemon slice garnish. "
+            + BRAND_STYLE
+        ),
+    },
+    {
+        "filename": "sweets-pound.jpg",
+        "aspect_ratio": "4:3",
+        "prompt": (
+            "Seasonal pound cake slice on white ceramic plate, "
+            "moist golden crumb, topped with seasonal fruit, "
+            "warm bakery presentation. "
+            + BRAND_STYLE
+        ),
+    },
+    {
+        "filename": "sweets-basque.jpg",
         "aspect_ratio": "4:3",
         "prompt": (
             "Basque burnt cheesecake slice on white ceramic plate, "
@@ -162,18 +201,7 @@ IMAGES = [
         ),
     },
     {
-        "filename": "sweets-02.jpg",
-        "aspect_ratio": "4:3",
-        "prompt": (
-            "Seasonal fruit tart on white ceramic plate, "
-            "glossy fresh strawberries and blueberries arranged on "
-            "smooth vanilla custard, flaky golden pastry shell, "
-            "food styling, top-down angle. "
-            + BRAND_STYLE
-        ),
-    },
-    {
-        "filename": "sweets-03.jpg",
+        "filename": "sweets-scone.jpg",
         "aspect_ratio": "4:3",
         "prompt": (
             "Two freshly baked scones on small wooden serving board, "
@@ -184,40 +212,50 @@ IMAGES = [
         ),
     },
     {
-        "filename": "sweets-04.jpg",
+        "filename": "sweets-tart.jpg",
         "aspect_ratio": "4:3",
         "prompt": (
-            "Matcha terrine slice on dark navy ceramic plate, "
-            "deep vibrant green color, smooth dense silky texture, "
-            "light dusting of matcha powder on top, "
-            "Japanese minimalist aesthetic, side view. "
+            "Seasonal fruit tart on white ceramic plate, "
+            "glossy fresh strawberries and blueberries arranged on "
+            "smooth vanilla custard, flaky golden pastry shell, "
+            "food styling, top-down angle. "
             + BRAND_STYLE
         ),
     },
 
     # ── ギャラリー ──────────────────────────────────────────
     {
-        "filename": "gallery-01.jpg",
+        "filename": "gallery-1.jpg",
         "aspect_ratio": "1:1",
         "prompt": (
-            "Overhead flat lay, coffee cup and cheesecake slice "
-            "on wooden cafe table, morning light, lifestyle photography, "
+            "Close-up of freshly brewed coffee in glass, "
+            "transparent amber color, light refracting, "
+            "square composition, high clarity. "
+            + BRAND_STYLE
+        ),
+    },
+    {
+        "filename": "gallery-2.jpg",
+        "aspect_ratio": "1:1",
+        "prompt": (
+            "Freshly made sweets display on wooden counter, "
+            "cheesecake and tart, morning prep, "
             "square composition. "
             + BRAND_STYLE
         ),
     },
     {
-        "filename": "gallery-02.jpg",
+        "filename": "gallery-3.jpg",
         "aspect_ratio": "1:1",
         "prompt": (
-            "Coffee cup beside open book on wooden windowsill, "
-            "golden hour sunlight, cozy reading atmosphere, "
-            "square composition. "
+            "Window seat in cafe, afternoon sunlight, "
+            "coffee cup on table by the window, "
+            "peaceful quiet atmosphere, square composition. "
             + BRAND_STYLE
         ),
     },
     {
-        "filename": "gallery-03.jpg",
+        "filename": "gallery-4.jpg",
         "aspect_ratio": "1:1",
         "prompt": (
             "Latte art close-up, delicate rosette pattern on "
@@ -227,39 +265,29 @@ IMAGES = [
         ),
     },
     {
-        "filename": "gallery-04.jpg",
+        "filename": "gallery-5.jpg",
         "aspect_ratio": "1:1",
         "prompt": (
-            "Cafe interior wide shot, afternoon golden light, "
-            "wooden tables and chairs, hanging plants, "
-            "warm inviting empty cafe, square composition. "
+            "Cafe counter seats, wooden bar counter, "
+            "warm ambient lighting, inviting atmosphere, "
+            "square composition. "
             + BRAND_STYLE
         ),
     },
     {
-        "filename": "gallery-05.jpg",
+        "filename": "gallery-6.jpg",
         "aspect_ratio": "1:1",
         "prompt": (
-            "Seasonal sweets display on wooden counter, "
-            "cheesecake and tart under glass cloche dome, "
-            "handwritten chalkboard menu behind, square composition. "
-            + BRAND_STYLE
-        ),
-    },
-    {
-        "filename": "gallery-06.jpg",
-        "aspect_ratio": "1:1",
-        "prompt": (
-            "Barista hand-scooping freshly roasted coffee beans "
-            "into kraft paper bag, roastery setting, "
-            "artisan retail atmosphere, square composition. "
+            "Seasonal parfait dessert in tall glass, "
+            "layers of fruit, cream and coffee jelly, "
+            "cafe table setting, square composition. "
             + BRAND_STYLE
         ),
     },
 
     # ── スタッフ ────────────────────────────────────────────
     {
-        "filename": "staff-01.jpg",
+        "filename": "staff-kimura.jpg",
         "aspect_ratio": "1:1",
         "prompt": (
             "Japanese male barista in his early 30s, "
@@ -271,7 +299,7 @@ IMAGES = [
         ),
     },
     {
-        "filename": "staff-02.jpg",
+        "filename": "staff-hayashi.jpg",
         "aspect_ratio": "1:1",
         "prompt": (
             "Japanese female pastry chef in her late 20s, "
@@ -283,10 +311,10 @@ IMAGES = [
         ),
     },
     {
-        "filename": "staff-03.jpg",
+        "filename": "staff-watanabe.jpg",
         "aspect_ratio": "1:1",
         "prompt": (
-            "Japanese female barista in her mid 20s, "
+            "Japanese male barista in his mid 20s, "
             "pouring latte art into cup, natural warm smile, "
             "cafe counter with espresso machine behind, "
             "chest-up portrait, candid moment. "
