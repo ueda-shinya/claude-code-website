@@ -4,28 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index,follow">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+
+  <!-- Title (60文字以内) -->
   <title>THE CORNER CAFE｜自家焙煎コーヒーと手作りスイーツの街角カフェ</title>
-  <meta name="description" content="こだわりの自家焙煎コーヒーと手作りスイーツをお楽しみください。地域密着5年、ここにくると、ほっとする。あなたの日常に、特別な一杯を。">
-  <link rel="canonical" href="https://thecornercafe.jp">
+
+  <!-- Meta Description (120〜155文字) -->
+  <meta name="description" content="渋谷区神宮前の自家焙煎カフェ。こだわりのコーヒーと毎朝手作りのスイーツを提供。地域密着5年、リピーター率80%以上。一人でも気軽に入れる、ほっとできる街角の一杯をどうぞ。">
+
+  <!-- Keywords -->
+  <meta name="keywords" content="カフェ,自家焙煎コーヒー,手作りスイーツ,渋谷,原宿,神宮前,コーヒー専門店">
+
+  <!-- Canonical (末尾スラッシュ統一) -->
+  <link rel="canonical" href="https://thecornercafe.jp/">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#6B4C35">
+
+  <!-- Favicon / Touch Icon -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.webp">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.webp">
 
   <!-- OGP -->
   <meta property="og:title" content="THE CORNER CAFE｜自家焙煎コーヒーと手作りスイーツの街角カフェ">
-  <meta property="og:description" content="こだわりの自家焙煎コーヒーと手作りスイーツをお楽しみください。地域密着5年、ここにくると、ほっとする。あなたの日常に、特別な一杯を。">
+  <meta property="og:description" content="渋谷区神宮前の自家焙煎カフェ。こだわりのコーヒーと毎朝手作りのスイーツを提供。地域密着5年、リピーター率80%以上。一人でも気軽に入れる、ほっとできる街角の一杯をどうぞ。">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://thecornercafe.jp">
-  <meta property="og:image" content="https://thecornercafe.jp/assets/images/og-image.jpg">
+  <meta property="og:url" content="https://thecornercafe.jp/">
+  <meta property="og:image" content="https://thecornercafe.jp/assets/images/og-image.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="THE CORNER CAFE — 自家焙煎コーヒーと手作りスイーツの街角カフェ">
+  <meta property="og:site_name" content="THE CORNER CAFE">
+  <meta property="og:locale" content="ja_JP">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@thecornercafe">
   <meta name="twitter:title" content="THE CORNER CAFE｜自家焙煎コーヒーと手作りスイーツの街角カフェ">
-  <meta name="twitter:description" content="こだわりの自家焙煎コーヒーと手作りスイーツをお楽しみください。地域密着5年、ここにくると、ほっとする。あなたの日常に、特別な一杯を。">
-  <meta name="twitter:image" content="https://thecornercafe.jp/assets/images/og-image.jpg">
+  <meta name="twitter:description" content="渋谷区神宮前の自家焙煎カフェ。こだわりのコーヒーと毎朝手作りのスイーツを提供。地域密着5年、リピーター率80%以上。一人でも気軽に入れる、ほっとできる街角の一杯をどうぞ。">
+  <meta name="twitter:image" content="https://thecornercafe.jp/assets/images/og-image.webp">
 
-  <!-- Google Fonts preconnect -->
+  <!-- Google Fonts: preconnect + dns-prefetch -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
-  <!-- Stylesheet -->
+  <!-- Google Fonts: preload -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@300;400;500;700&display=swap">
+
+  <!-- Stylesheet preload + load -->
+  <link rel="preload" as="style" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/styles.css">
 
   <!-- JSON-LD: CafeOrRestaurant -->
@@ -33,7 +63,9 @@
   {
     "@context": "https://schema.org",
     "@type": "CafeOrRestaurant",
+    "@id": "https://thecornercafe.jp/#cafe",
     "name": "THE CORNER CAFE",
+    "alternateName": "ザ コーナーカフェ",
     "description": "こだわりの自家焙煎コーヒーと手作りスイーツをお楽しみください。地域密着5年、ここにくると、ほっとする。",
     "url": "https://thecornercafe.jp",
     "telephone": "03-4567-8901",
@@ -45,14 +77,27 @@
       "postalCode": "150-0001",
       "addressCountry": "JP"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "35.6708",
+      "longitude": "139.7041"
+    },
     "openingHoursSpecification": [
       {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "20:00"},
       {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "19:00"}
     ],
-    "servesCuisine": ["Coffee", "Sweets"],
+    "servesCuisine": ["コーヒー", "スイーツ", "自家焙煎コーヒー", "手作りスイーツ"],
     "priceRange": "¥¥",
-    "image": "https://thecornercafe.jp/assets/images/og-image.jpg",
-    "sameAs": ["https://www.instagram.com/thecornercafe/"]
+    "image": "https://thecornercafe.jp/assets/images/og-image.webp",
+    "logo": "https://thecornercafe.jp/assets/images/logo.webp",
+    "sameAs": [
+      "https://www.instagram.com/thecornercafe/"
+    ],
+    "hasMap": "https://maps.google.com/?q=東京都渋谷区神宮前2丁目14-8",
+    "publicAccess": true,
+    "smokingAllowed": false,
+    "paymentAccepted": "Cash, Credit Card",
+    "currenciesAccepted": "JPY"
   }
   </script>
 
@@ -129,8 +174,27 @@
     ]
   }
   </script>
+
+  <!-- JSON-LD: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://thecornercafe.jp/#website",
+    "name": "THE CORNER CAFE",
+    "url": "https://thecornercafe.jp",
+    "description": "こだわりの自家焙煎コーヒーと手作りスイーツの街角カフェ",
+    "inLanguage": "ja",
+    "publisher": {
+      "@id": "https://thecornercafe.jp/#cafe"
+    }
+  }
+  </script>
 </head>
 <body>
+
+<!-- Skip Navigation -->
+<a href="#main-content" class="u-skip-link">メインコンテンツへスキップ</a>
 
 <!-- ========== SECTION: Header ========== -->
 <header id="site-header" class="p-header" role="banner">
@@ -138,7 +202,7 @@
     <a href="/" class="p-header__logo" aria-label="THE CORNER CAFE トップページへ">THE CORNER CAFE</a>
 
     <!-- PC Navigation -->
-    <nav class="p-header__nav" aria-label="グローバルナビゲーション">
+    <nav class="p-header__nav" aria-label="メインナビゲーション">
       <ul class="p-header__nav-list">
         <li><a href="#concept" class="p-header__nav-link">こだわり</a></li>
         <li><a href="#menu" class="p-header__nav-link">メニュー</a></li>
@@ -194,7 +258,7 @@
   <!-- ========== SECTION: Hero ========== -->
   <section class="p-hero" aria-labelledby="hero-title">
     <div class="p-hero__bg" aria-hidden="true">
-      <img src="assets/images/placeholder-hero.jpg" alt="THE CORNER CAFEのコーヒーと空間" class="p-hero__bg-img" loading="eager">
+      <img src="assets/images/placeholder-hero.webp" alt="THE CORNER CAFEの店内 — 自家焙煎コーヒーが香る渋谷・神宮前の街角カフェ" class="p-hero__bg-img" loading="eager" fetchpriority="high" width="1920" height="1080">
     </div>
     <div class="l-container p-hero__content">
       <span class="c-section-label c-section-label--light">SINCE 2021 — ROASTERY &amp; CAFÉ</span>
@@ -219,7 +283,7 @@
 
       <div class="p-concept__grid">
         <div class="p-concept__image-wrapper reveal">
-          <img src="assets/images/placeholder-concept.jpg" alt="焙煎中の豆とカフェ内装" loading="lazy">
+          <img src="assets/images/placeholder-concept.webp" alt="THE CORNER CAFEの自家焙煎豆と温かみのある店内インテリア" loading="lazy" width="600" height="450">
         </div>
 
         <div class="p-concept__body">
@@ -261,7 +325,7 @@
       <div id="tab-panel-coffee" class="p-menu__grid" role="tabpanel" aria-labelledby="tab-coffee" data-category="coffee">
         <article class="c-card-menu reveal reveal--delay-1" data-category="coffee">
           <div class="c-card-menu__image-wrapper">
-            <img src="assets/images/placeholder-coffee.jpg" alt="コーナーブレンド" loading="lazy">
+            <img src="assets/images/placeholder-coffee.webp" alt="コーナーブレンド — 自家焙煎コーヒー ¥550" loading="lazy" width="400" height="300">
             <span class="c-card-menu__tag">自家焙煎</span>
           </div>
           <div class="c-card-menu__body">
@@ -273,7 +337,7 @@
 
         <article class="c-card-menu reveal reveal--delay-2" data-category="coffee">
           <div class="c-card-menu__image-wrapper">
-            <img src="assets/images/placeholder-coffee.jpg" alt="シングルオリジン エチオピア" loading="lazy">
+            <img src="assets/images/placeholder-coffee.webp" alt="シングルオリジン エチオピア — 自家焙煎コーヒー ¥680" loading="lazy" width="400" height="300">
             <span class="c-card-menu__tag">自家焙煎</span>
           </div>
           <div class="c-card-menu__body">
@@ -285,7 +349,7 @@
 
         <article class="c-card-menu reveal reveal--delay-3" data-category="coffee">
           <div class="c-card-menu__image-wrapper">
-            <img src="assets/images/placeholder-coffee.jpg" alt="カフェラテ" loading="lazy">
+            <img src="assets/images/placeholder-coffee.webp" alt="カフェラテ — 自家焙煎エスプレッソ使用 ¥620" loading="lazy" width="400" height="300">
             <span class="c-card-menu__tag">自家焙煎</span>
           </div>
           <div class="c-card-menu__body">
@@ -297,7 +361,7 @@
 
         <article class="c-card-menu reveal reveal--delay-4" data-category="coffee">
           <div class="c-card-menu__image-wrapper">
-            <img src="assets/images/placeholder-coffee.jpg" alt="季節のスペシャルティ" loading="lazy">
+            <img src="assets/images/placeholder-coffee.webp" alt="季節のスペシャルティ — 旬の産地の自家焙煎コーヒー ¥750〜" loading="lazy" width="400" height="300">
             <span class="c-card-menu__tag">自家焙煎</span>
           </div>
           <div class="c-card-menu__body">
@@ -308,11 +372,11 @@
         </article>
       </div>
 
-      <!-- Sweets Panel -->
-      <div id="tab-panel-sweets" class="p-menu__grid u-hidden" role="tabpanel" aria-labelledby="tab-sweets" data-category="sweets">
+      <!-- Sweets Panel: Fix 2 — removed u-hidden class, added hidden attribute -->
+      <div id="tab-panel-sweets" class="p-menu__grid" role="tabpanel" aria-labelledby="tab-sweets" data-category="sweets" hidden>
         <article class="c-card-menu reveal reveal--delay-1" data-category="sweets">
           <div class="c-card-menu__image-wrapper">
-            <img src="assets/images/placeholder-sweets.jpg" alt="バスクチーズケーキ" loading="lazy">
+            <img src="assets/images/placeholder-sweets.webp" alt="バスクチーズケーキ — 毎朝焼き上げる手作りスイーツ ¥550" loading="lazy" width="400" height="300">
             <span class="c-card-menu__tag">手作り</span>
           </div>
           <div class="c-card-menu__body">
@@ -324,7 +388,7 @@
 
         <article class="c-card-menu reveal reveal--delay-2" data-category="sweets">
           <div class="c-card-menu__image-wrapper">
-            <img src="assets/images/placeholder-sweets.jpg" alt="季節のタルト" loading="lazy">
+            <img src="assets/images/placeholder-sweets.webp" alt="季節のタルト — 旬のフルーツを使った手作りスイーツ ¥600" loading="lazy" width="400" height="300">
             <span class="c-card-menu__tag">手作り</span>
           </div>
           <div class="c-card-menu__body">
@@ -336,7 +400,7 @@
 
         <article class="c-card-menu reveal reveal--delay-3" data-category="sweets">
           <div class="c-card-menu__image-wrapper">
-            <img src="assets/images/placeholder-sweets.jpg" alt="自家製スコーン（2個セット）" loading="lazy">
+            <img src="assets/images/placeholder-sweets.webp" alt="自家製スコーン（2個セット） — クロテッドクリーム添え手作りスイーツ ¥480" loading="lazy" width="400" height="300">
             <span class="c-card-menu__tag">手作り</span>
           </div>
           <div class="c-card-menu__body">
@@ -348,7 +412,7 @@
 
         <article class="c-card-menu reveal reveal--delay-4" data-category="sweets">
           <div class="c-card-menu__image-wrapper">
-            <img src="assets/images/placeholder-sweets.jpg" alt="抹茶テリーヌ" loading="lazy">
+            <img src="assets/images/placeholder-sweets.webp" alt="抹茶テリーヌ — 濃厚抹茶の手作りスイーツ ¥520" loading="lazy" width="400" height="300">
             <span class="c-card-menu__tag">手作り</span>
           </div>
           <div class="c-card-menu__body">
@@ -375,32 +439,32 @@
       <div class="p-gallery__grid">
         <div class="p-gallery__item p-gallery__item--featured reveal">
           <a href="https://www.instagram.com/thecornercafe/" class="p-gallery__link" target="_blank" rel="noopener noreferrer" aria-label="Instagramでギャラリーを見る">
-            <img src="assets/images/placeholder-gallery.jpg" alt="コーヒーのある日常 #thecornercafe" loading="lazy">
+            <img src="assets/images/placeholder-gallery.webp" alt="THE CORNER CAFEのコーヒーと空間 #thecornercafe" loading="lazy" width="800" height="600">
           </a>
         </div>
         <div class="p-gallery__item reveal reveal--delay-1">
           <a href="https://www.instagram.com/thecornercafe/" class="p-gallery__link" target="_blank" rel="noopener noreferrer" aria-label="Instagramでギャラリーを見る">
-            <img src="assets/images/placeholder-gallery.jpg" alt="手作りスイーツ #thecornercafe" loading="lazy">
+            <img src="assets/images/placeholder-gallery.webp" alt="THE CORNER CAFEの手作りスイーツ #thecornercafe" loading="lazy" width="400" height="400">
           </a>
         </div>
         <div class="p-gallery__item reveal reveal--delay-2">
           <a href="https://www.instagram.com/thecornercafe/" class="p-gallery__link" target="_blank" rel="noopener noreferrer" aria-label="Instagramでギャラリーを見る">
-            <img src="assets/images/placeholder-gallery.jpg" alt="自家焙煎コーヒー豆 #thecornercafe" loading="lazy">
+            <img src="assets/images/placeholder-gallery.webp" alt="THE CORNER CAFEの自家焙煎コーヒー豆 #thecornercafe" loading="lazy" width="400" height="400">
           </a>
         </div>
         <div class="p-gallery__item reveal reveal--delay-3">
           <a href="https://www.instagram.com/thecornercafe/" class="p-gallery__link" target="_blank" rel="noopener noreferrer" aria-label="Instagramでギャラリーを見る">
-            <img src="assets/images/placeholder-gallery.jpg" alt="カフェの雰囲気 #thecornercafe" loading="lazy">
+            <img src="assets/images/placeholder-gallery.webp" alt="THE CORNER CAFEの落ち着いたカフェ空間 #thecornercafe" loading="lazy" width="400" height="400">
           </a>
         </div>
         <div class="p-gallery__item reveal reveal--delay-4">
           <a href="https://www.instagram.com/thecornercafe/" class="p-gallery__link" target="_blank" rel="noopener noreferrer" aria-label="Instagramでギャラリーを見る">
-            <img src="assets/images/placeholder-gallery.jpg" alt="季節のドリンク #thecornercafe" loading="lazy">
+            <img src="assets/images/placeholder-gallery.webp" alt="THE CORNER CAFEの季節のドリンク #thecornercafe" loading="lazy" width="400" height="400">
           </a>
         </div>
         <div class="p-gallery__item reveal reveal--delay-4">
           <a href="https://www.instagram.com/thecornercafe/" class="p-gallery__link" target="_blank" rel="noopener noreferrer" aria-label="Instagramでギャラリーを見る">
-            <img src="assets/images/placeholder-gallery.jpg" alt="ラテアート #thecornercafe" loading="lazy">
+            <img src="assets/images/placeholder-gallery.webp" alt="THE CORNER CAFEのラテアート #thecornercafe" loading="lazy" width="400" height="400">
           </a>
         </div>
       </div>
@@ -476,7 +540,7 @@
 
       <div class="p-faq__grid">
         <div class="p-faq__lead reveal">
-          <h2 class="p-faq__lead-title" aria-hidden="true">よくあるご質問</h2>
+          <p class="p-faq__lead-title" aria-hidden="true">よくあるご質問</p>
           <p class="p-faq__lead-text">はじめての方も、常連の方も。気になることがあれば、いつでもお気軽にどうぞ。</p>
         </div>
 
@@ -591,7 +655,7 @@
       <div class="p-staff__grid">
         <article class="c-card-staff reveal reveal--delay-1">
           <div class="c-card-staff__image-wrapper">
-            <img src="assets/images/staff-1.jpg" alt="中村 健太の写真" loading="lazy" width="120" height="120">
+            <img src="assets/images/staff-1.webp" alt="THE CORNER CAFE スタッフ 中村 健太 — 店長・焙煎士" loading="lazy" width="120" height="120">
           </div>
           <div class="c-card-staff__body">
             <h3 class="c-card-staff__name">中村 健太<span class="c-card-staff__name-ruby">なかむら けんた</span></h3>
@@ -602,7 +666,7 @@
 
         <article class="c-card-staff reveal reveal--delay-2">
           <div class="c-card-staff__image-wrapper">
-            <img src="assets/images/staff-2.jpg" alt="佐藤 ゆきの写真" loading="lazy" width="120" height="120">
+            <img src="assets/images/staff-2.webp" alt="THE CORNER CAFE スタッフ 佐藤 ゆき — パティシエ" loading="lazy" width="120" height="120">
           </div>
           <div class="c-card-staff__body">
             <h3 class="c-card-staff__name">佐藤 ゆき<span class="c-card-staff__name-ruby">さとう ゆき</span></h3>
@@ -613,7 +677,7 @@
 
         <article class="c-card-staff reveal reveal--delay-3">
           <div class="c-card-staff__image-wrapper">
-            <img src="assets/images/staff-3.jpg" alt="林 まいこの写真" loading="lazy" width="120" height="120">
+            <img src="assets/images/staff-3.webp" alt="THE CORNER CAFE スタッフ 林 まいこ — バリスタ・ホールスタッフ" loading="lazy" width="120" height="120">
           </div>
           <div class="c-card-staff__body">
             <h3 class="c-card-staff__name">林 まいこ<span class="c-card-staff__name-ruby">はやし まいこ</span></h3>
@@ -636,7 +700,7 @@
           <dl class="p-store-info__table">
             <div class="p-store-info__row">
               <dt class="p-store-info__dt">住所</dt>
-              <dd class="p-store-info__dd">〒150-0001 東京都渋谷区神宮前2丁目14-8 コーナービル 1F</dd>
+              <dd class="p-store-info__dd">〒150-0001 東京都<span itemprop="addressRegion">渋谷区</span><span itemprop="addressLocality">神宮前</span>2丁目14-8 コーナービル 1F</dd>
             </div>
             <div class="p-store-info__row">
               <dt class="p-store-info__dt">営業時間</dt>
@@ -668,9 +732,11 @@
         </div>
 
         <div class="p-store-info__map reveal">
+          <!-- Fix 7: added class="p-store-info__map-frame" -->
           <iframe
+            class="p-store-info__map-frame"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.186682!2d139.7025!3d35.6647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E7%A5%9E%E5%AE%AE%E5%89%8D2%E4%B8%81%E7%9B%AE14-8!5e0!3m2!1sja!2sjp!4v1"
-            title="THE CORNER CAFEの地図"
+            title="THE CORNER CAFE — 東京都渋谷区神宮前2丁目14-8の地図"
             width="100%"
             height="400"
             style="border:0;"
@@ -688,10 +754,10 @@
     <div class="l-container">
       <span class="c-section-label reveal">CONTACT</span>
       <h2 id="contact-title" class="c-section-title reveal">お問い合わせ</h2>
-      <p class="p-contact__lead reveal">ご来店前のご質問や、貸し切りのご相談など、お気軽にメッセージをお送りください。通常2営業日以内にご返信します。</p>
+      <p id="contact-lead" class="p-contact__lead reveal">ご来店前のご質問や、貸し切りのご相談など、お気軽にメッセージをお送りください。通常2営業日以内にご返信します。</p>
 
       <div class="p-contact__wrapper reveal">
-        <form id="contact-form" class="p-contact__form" action="php/form_handler.php" method="POST" novalidate>
+        <form id="contact-form" class="p-contact__form" action="php/form_handler.php" method="POST" novalidate aria-describedby="contact-lead">
           <!-- CSRF Token (PHP側で出力) -->
           <input type="hidden" name="csrf_token" value="">
 

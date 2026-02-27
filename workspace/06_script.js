@@ -200,21 +200,17 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       const isOpen = item.classList.contains('is-open');
 
-      // 他を全て閉じる（max-height を 0 にリセット）
+      // 他を全て閉じる
       accordionItems.forEach(other => {
         other.classList.remove('is-open');
         const otherBtn = other.querySelector('.c-accordion__question');
         if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
-        const otherBody = other.querySelector('.c-accordion__body');
-        if (otherBody) otherBody.style.maxHeight = '0px';
       });
 
-      // クリックしたものをトグル（scrollHeight で実際の高さをセット）
+      // クリックしたものをトグル
       if (!isOpen) {
         item.classList.add('is-open');
         btn.setAttribute('aria-expanded', 'true');
-        const body = item.querySelector('.c-accordion__body');
-        if (body) body.style.maxHeight = body.scrollHeight + 'px';
       }
     });
   });
@@ -228,6 +224,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const submitBtn = form.querySelector('.js-form-submit');
   const thanksEl  = document.querySelector('.p-contact__thanks');
+
+  // エスケープ（XSS防止）
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
 
   // エラー表示
   function showError(fieldId, message) {
@@ -269,8 +272,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!name.value.trim()) {
       showError('name', 'お名前を入力してください。');
       isValid = false;
-    } else if (name.value.length > 50) {
-      showError('name', 'お名前は50文字以内でご入力ください。');
+    } else if (name.value.length > 100) {
+      showError('name', 'お名前は100文字以内でご入力ください。');
       isValid = false;
     }
 
@@ -290,8 +293,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!message.value.trim()) {
       showError('message', 'お問い合わせ内容を入力してください。');
       isValid = false;
-    } else if (message.value.length > 1000) {
-      showError('message', 'お問い合わせ内容は1000文字以内でご入力ください。');
+    } else if (message.value.length > 2000) {
+      showError('message', 'お問い合わせ内容は2000文字以内でご入力ください。');
       isValid = false;
     }
 
@@ -347,6 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!response.ok) throw new Error('Server error: ' + response.status);
 
       // 成功
+      const formWrapper = form.closest('.p-contact__form') || form.parentElement;
       form.classList.add('u-hidden');
       if (thanksEl) {
         thanksEl.classList.remove('u-hidden');

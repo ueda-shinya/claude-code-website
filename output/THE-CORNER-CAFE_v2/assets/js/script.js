@@ -131,10 +131,14 @@ function initReveal() {
 
 // ─────────────────────────────────────────────
 // 4. メニュータブ（コーヒー / スイーツ）
+// Fix 1: セレクターを HTML の実装に合わせて修正
+//   タブボタン: data-tab="coffee" / data-tab="sweets"
+//   パネル: class="p-menu__grid" data-category="coffee" / data-category="sweets"
 // ─────────────────────────────────────────────
 function initMenuTabs() {
   const tabs   = document.querySelectorAll('.p-menu__tab');
-  const panels = document.querySelectorAll('.p-menu__panel');
+  // Fix 1: .p-menu__panel ではなく .p-menu__grid[data-category] を使う
+  const panels = document.querySelectorAll('.p-menu__grid[data-category]');
 
   if (!tabs.length || !panels.length) return;
 
@@ -150,20 +154,19 @@ function initMenuTabs() {
 
       // すべてのパネルを非表示にする
       panels.forEach(panel => {
-        panel.hidden = true;
+        panel.setAttribute('hidden', '');
       });
 
       // クリックされたタブをアクティブにする
       tab.classList.add('is-active');
       tab.setAttribute('aria-selected', 'true');
 
-      // 対応するパネルを表示する
-      const targetPanel = document.querySelector(
-        `.p-menu__panel[data-panel="${targetKey}"]`
-      );
-      if (targetPanel) {
-        targetPanel.hidden = false;
-      }
+      // Fix 1: data-category 属性で対応するパネルを探す
+      panels.forEach(panel => {
+        if (panel.dataset.category === targetKey) {
+          panel.removeAttribute('hidden');
+        }
+      });
     });
   });
 }
@@ -230,11 +233,11 @@ function initContactForm() {
     field.setAttribute('aria-invalid', 'true');
 
     // 既存エラーメッセージを削除してから追加
-    const existing = field.parentElement.querySelector('.form-error');
+    const existing = field.parentElement.querySelector('.form-error, .p-contact__field-error');
     if (existing) existing.remove();
 
     const errorEl = document.createElement('p');
-    errorEl.className = 'form-error';
+    errorEl.className = 'p-contact__field-error';
     errorEl.setAttribute('role', 'alert');
     errorEl.setAttribute('aria-live', 'polite');
     // textContent を使用して XSS を防ぐ
@@ -246,7 +249,7 @@ function initContactForm() {
   function clearFieldError(field) {
     field.classList.remove('is-error');
     field.removeAttribute('aria-invalid');
-    const existing = field.parentElement.querySelector('.form-error');
+    const existing = field.parentElement.querySelector('.form-error, .p-contact__field-error');
     if (existing) existing.remove();
   }
 

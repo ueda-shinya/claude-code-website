@@ -210,10 +210,6 @@ button {
   gap: var(--space-lg);
 }
 
-.l-header__nav-item {
-  list-style: none;
-}
-
 .l-header__nav-link {
   font-size: 0.875rem;
   font-weight: 500;
@@ -291,10 +287,6 @@ button {
   flex-direction: column;
   gap: var(--space-md);
   margin-top: var(--space-3xl);
-}
-
-.l-drawer__nav-item {
-  list-style: none;
 }
 
 .l-drawer__nav-link {
@@ -386,10 +378,6 @@ button {
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-md) var(--space-lg);
-}
-
-.l-footer__nav-item {
-  list-style: none;
 }
 
 .l-footer__nav-link {
@@ -736,10 +724,13 @@ button {
 }
 
 .c-accordion__body {
-  overflow: hidden;
   max-height: 0;
-  /* max-height は JS で scrollHeight を動的にセット（0→実高さのみアニメーション）*/
+  overflow: hidden;
   transition: max-height 0.35s ease;
+}
+
+.c-accordion__item.is-open .c-accordion__body {
+  max-height: 600px;
 }
 
 .c-accordion__answer {
@@ -832,16 +823,6 @@ button {
   font-size: 0.8125rem;
   color: var(--color-error);
   min-height: 1.2em;
-}
-
-.c-form__server-error {
-  font-size: 0.875rem;
-  color: var(--color-error);
-  background-color: rgba(176, 74, 74, 0.08);
-  border: 1px solid rgba(176, 74, 74, 0.3);
-  border-radius: 6px;
-  padding: var(--space-md);
-  margin-bottom: var(--space-md);
 }
 
 .c-form__checkbox-wrap {
@@ -976,13 +957,6 @@ button {
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-lg);
   }
-}
-
-.p-stats__item {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .p-stats__number {

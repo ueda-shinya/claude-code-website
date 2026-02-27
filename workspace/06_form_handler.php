@@ -103,7 +103,7 @@ $message     = sanitize($_POST['message']      ?? '');
 // ─── バリデーション ───────────────────────────────────────────
 $errors = [];
 
-if ($name === '' || mb_strlen($name) > 50) {
+if ($name === '' || mb_strlen($name) > 100) {
     $errors[] = 'お名前が不正です。';
 }
 
@@ -116,7 +116,7 @@ if (!in_array($inquiry, $allowed_types, true)) {
     $errors[] = 'お問い合わせの種類が不正です。';
 }
 
-if ($message === '' || mb_strlen($message) > 1000) {
+if ($message === '' || mb_strlen($message) > 2000) {
     $errors[] = 'お問い合わせ内容が不正です。';
 }
 
@@ -151,9 +151,8 @@ $body .= str_repeat('-', 40) . "\n";
 $body .= "送信日時: " . date('Y-m-d H:i:s') . "\n";
 $body .= "IPアドレス: {$ip}\n";
 
-$email_safe = str_replace(["\r", "\n"], '', $email);
 $headers  = "From: " . MAIL_FROM . "\r\n";
-$headers .= "Reply-To: {$email_safe}\r\n";
+$headers .= "Reply-To: {$email}\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 

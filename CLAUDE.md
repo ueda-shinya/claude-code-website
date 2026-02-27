@@ -175,6 +175,20 @@ Phase 9  最終組み立て（自分）→ output/
 - `assets/css/styles.css` と `assets/js/script.js` をリンク
 - フォームは `php/form_handler.php` へ POST
 
+**【必須】画像マニフェストを HTML 末尾のコメントに出力する:**
+`<img src>` で参照する全画像ファイルを `</html>` 直前に列挙すること。
+後工程（generate_images.py の更新・QA の照合）で使用する。
+
+```html
+<!-- IMAGE_MANIFEST
+hero.jpg 16:9 ヒーロー背景
+concept-01.jpg 4:3 コンセプトセクション画像1
+concept-02.jpg 4:3 コンセプトセクション画像2
+...
+-->
+</html>
+```
+
 ---
 
 ### Phase 6 — 並列（Task ツールで3エージェントを同時起動）
@@ -216,20 +230,55 @@ Phase 9  最終組み立て（自分）→ output/
 - HTML・CSS・JSの整合性（クラス名・IDの一致）
 - セキュリティ（XSS・インラインイベントハンドラ・PHP）
 - アクセシビリティ（ARIA・altテキスト・フォームラベル）
+- **【必須】画像・アセット整合性チェック（以下を全て確認する）:**
+  - `07_seo.html` の全 `<img src>` 値を抽出し、`generate_images.py` の生成リストと1件ずつ照合
+  - HTML に存在するが generate_images.py にない画像ファイル名を CRITICAL として報告
+  - generate_images.py に定義されているが HTML から参照されていない（孤立した）エントリを WARNING として報告
+  - CSS 背景画像（`background-image: url(...)` 等）も対象に含める
 - 問題点を 🔴CRITICAL / 🟡WARNING / 🟢INFO で分類
 
 **QA** (`workspace/08_review_qa.md`)
 - 仕様書（01_spec.md）との照合
 - コピー（03_copy.md）との照合（テキストが正確に入っているか）
 - ブランドボイスの遵守確認
+- **【必須】納品物として動作するかの確認（以下を全て確認する）:**
+  - 全 `<img src>` のファイル名が IMAGE_MANIFEST と一致しているか
+  - `<link rel="stylesheet">` / `<script src>` のパスが正しいか
+  - フォームの `action` 属性のパスが正しいか
+  - `<link rel="preload">` の対象が実際に `<img src>` / CSS で使われているか
 - 問題点を HIGH / MEDIUM / LOW で分類
 
 ---
 
 ### Phase 9 — 最終組み立て（自分で実行）
 
-レビュー結果（`08_review_code.md`, `08_review_qa.md`）を読み、
-🔴CRITICAL / HIGH の修正を適用した上で、**ファイル管理ルール**に従って納品物を書き出す。
+以下の手順を**必ず順番に**実行する:
+
+**ステップ1 — レビュー修正**
+`08_review_code.md` と `08_review_qa.md` を読み、🔴CRITICAL / HIGH の修正を `07_seo.html` / CSS / JS / PHP に適用する。
+
+**ステップ2 — 画像リスト照合と generate_images.py 更新（必須）**
+1. `07_seo.html` の全 `<img src>` 値を抽出する
+2. `generate_images.py` の生成リストと1件ずつ照合する
+3. 不一致があれば `generate_images.py` の IMAGE_LIST を HTML の参照に合わせて更新する
+   - HTML に存在するが generate_images.py にない → generate_images.py に追加
+   - generate_images.py にあるが HTML から参照されていない → generate_images.py から削除（og-image等の特殊用途は除く）
+
+**ステップ3 — 画像生成**
+```bash
+python generate_images.py
+```
+
+**ステップ4 — WebP 変換**
+```bash
+python convert_to_webp.py
+```
+convert_to_webp.py は HTML の `src="....jpg"` を `src="....webp"` に自動置換する。
+変換後に HTML が `.webp` 参照になっていることを確認する。
+
+**ステップ5 — output/ への書き出し**
+**ファイル管理ルール**に従って納品物を `output/{案件名}/` に書き出す。
+`logs/.htaccess` と `README.md` も必ず作成する。
 
 ---
 
