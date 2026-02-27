@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+
+  <!-- Title (60文字以内) -->
+  <title>THE CORNER CAFE｜自家焙煎コーヒーと手作りスイーツの街角カフェ</title>
+
+  <!-- Meta Description (120〜155文字) -->
+  <meta name="description" content="渋谷区神宮前の自家焙煎カフェ。こだわりのコーヒーと毎朝手作りのスイーツを提供。地域密着5年、リピーター率80%以上。一人でも気軽に入れる、ほっとできる街角の一杯をどうぞ。">
+
+  <!-- Keywords -->
+  <meta name="keywords" content="カフェ,自家焙煎コーヒー,手作りスイーツ,渋谷,原宿,神宮前,コーヒー専門店">
+
+  <!-- Canonical (末尾スラッシュ統一) -->
+  <link rel="canonical" href="https://thecornercafe.jp/">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#6B4C35">
+
+  <!-- Favicon / Touch Icon -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+
+  <!-- OGP -->
+  <meta property="og:title" content="THE CORNER CAFE｜自家焙煎コーヒーと手作りスイーツの街角カフェ">
+  <meta property="og:description" content="渋谷区神宮前の自家焙煎カフェ。こだわりのコーヒーと毎朝手作りのスイーツを提供。地域密着5年、リピーター率80%以上。一人でも気軽に入れる、ほっとできる街角の一杯をどうぞ。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thecornercafe.jp/">
+  <meta property="og:image" content="https://thecornercafe.jp/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="THE CORNER CAFE — 自家焙煎コーヒーと手作りスイーツの街角カフェ">
+  <meta property="og:site_name" content="THE CORNER CAFE">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@thecornercafe">
+  <meta name="twitter:title" content="THE CORNER CAFE｜自家焙煎コーヒーと手作りスイーツの街角カフェ">
+  <meta name="twitter:description" content="渋谷区神宮前の自家焙煎カフェ。こだわりのコーヒーと毎朝手作りのスイーツを提供。地域密着5年、リピーター率80%以上。一人でも気軽に入れる、ほっとできる街角の一杯をどうぞ。">
+  <meta name="twitter:image" content="https://thecornercafe.jp/assets/images/og-image.jpg">
+
+  <!-- Google Fonts: preconnect + dns-prefetch -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+  <!-- Google Fonts: preload -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@300;400;500;700&display=swap">
+
+  <!-- Stylesheet preload + load -->
+  <link rel="preload" as="style" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- JSON-LD: CafeOrRestaurant -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrRestaurant",
+    "@id": "https://thecornercafe.jp/#cafe",
+    "name": "THE CORNER CAFE",
+    "alternateName": "ザ コーナーカフェ",
+    "description": "こだわりの自家焙煎コーヒーと手作りスイーツをお楽しみください。地域密着5年、ここにくると、ほっとする。",
+    "url": "https://thecornercafe.jp",
+    "telephone": "03-4567-8901",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "神宮前2丁目14-8 コーナービル 1F",
+      "addressLocality": "渋谷区",
+      "addressRegion": "東京都",
+      "postalCode": "150-0001",
+      "addressCountry": "JP"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "35.6708",
+      "longitude": "139.7041"
+    },
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "20:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "19:00"}
+    ],
+    "servesCuisine": ["コーヒー", "スイーツ", "自家焙煎コーヒー", "手作りスイーツ"],
+    "priceRange": "¥¥",
+    "image": "https://thecornercafe.jp/assets/images/og-image.jpg",
+    "logo": "https://thecornercafe.jp/assets/images/logo.png",
+    "sameAs": [
+      "https://www.instagram.com/thecornercafe/"
+    ],
+    "hasMap": "https://maps.google.com/?q=東京都渋谷区神宮前2丁目14-8",
+    "publicAccess": true,
+    "smokingAllowed": false,
+    "paymentAccepted": "Cash, Credit Card",
+    "currenciesAccepted": "JPY"
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "一人でも気軽に入れますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "もちろんです。お一人のお客さまも多く、読書や作業をしながらゆっくり過ごされています。スタッフがさりげなくご案内しますので、どうぞお気軽にお越しください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "予約はできますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "通常のカフェ利用は予約不要です。席数に限りがありますので、お友達とのグループでご来店の際はお問い合わせフォームからご連絡いただけると助かります。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ノートパソコンや作業をしてもいいですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、ご利用いただけます。Wi-Fiと電源コンセントをご用意しています。混雑時はご配慮いただけると嬉しいですが、基本的にゆっくりお過ごしください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "テイクアウトはできますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ドリンクのテイクアウトに対応しています。お急ぎの方も、ぜひお気軽にどうぞ。スイーツのテイクアウトは一部商品のみとなります。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "コーヒーの豆だけ買えますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、自家焙煎の豆をグラム販売しています。お好みの焙煎度や飲み方をスタッフにお伝えいただければ、ご自宅でも美味しく楽しめる豆をご提案します。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "アレルギーへの対応はしていますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "スイーツには小麦・乳・卵・ナッツ類を使用しているものがございます。アレルギーのあるお客さまは、ご注文時にスタッフへお申し付けください。できる限り対応いたします。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "子ども連れでも入れますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、お子さまとご一緒にお越しいただけます。お子さま向けのホットミルクやりんごジュースもご用意しています。ベビーカーでのご来店も大丈夫ですので、遠慮なくどうぞ。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "駐車場はありますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "店舗専用の駐車場はございませんが、近隣にコインパーキングが複数ございます。最寄り駅から徒歩5分ですので、電車でのご来店も便利です。"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://thecornercafe.jp/#website",
+    "name": "THE CORNER CAFE",
+    "url": "https://thecornercafe.jp",
+    "description": "こだわりの自家焙煎コーヒーと手作りスイーツの街角カフェ",
+    "inLanguage": "ja",
+    "publisher": {
+      "@id": "https://thecornercafe.jp/#cafe"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- Skip Navigation -->
+<a href="#main-content" class="u-skip-link">メインコンテンツへスキップ</a>
+
+<!-- ========== SECTION: Header ========== -->
+<header id="site-header" class="p-header" role="banner">
+  <div class="l-container p-header__inner">
+    <a href="/" class="p-header__logo" aria-label="THE CORNER CAFE トップページへ">THE CORNER CAFE</a>
+
+    <!-- PC Navigation -->
+    <nav class="p-header__nav" aria-label="メインナビゲーション">
+      <ul class="p-header__nav-list">
+        <li><a href="#concept" class="p-header__nav-link">こだわり</a></li>
+        <li><a href="#menu" class="p-header__nav-link">メニュー</a></li>
+        <li><a href="#gallery" class="p-header__nav-link">ギャラリー</a></li>
+        <li><a href="#staff" class="p-header__nav-link">スタッフ</a></li>
+        <li><a href="#info" class="p-header__nav-link">店舗情報</a></li>
+        <li><a href="#contact" class="p-header__nav-link">お問い合わせ</a></li>
+        <li>
+          <a href="https://www.instagram.com/thecornercafe/" class="c-btn c-btn--primary" target="_blank" rel="noopener noreferrer">Instagramを見る</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger Button -->
+    <button id="hamburger-btn" class="c-hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav-drawer">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <rect x="2" y="5" width="20" height="2" fill="currentColor"/>
+        <rect x="2" y="11" width="20" height="2" fill="currentColor"/>
+        <rect x="2" y="17" width="20" height="2" fill="currentColor"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- Nav Drawer Overlay -->
+<div id="nav-overlay" class="p-nav-overlay" aria-hidden="true"></div>
+
+<!-- Nav Drawer -->
+<nav id="nav-drawer" class="p-nav-drawer" aria-label="ドロワーナビゲーション" aria-hidden="true">
+  <div class="p-nav-drawer__inner">
+    <button id="drawer-close-btn" class="c-hamburger c-hamburger--close" type="button" aria-label="メニューを閉じる">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <line x1="20" y1="4" x2="4" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <ul class="p-nav-drawer__list">
+      <li><a href="#concept" class="p-nav-drawer__link">こだわり</a></li>
+      <li><a href="#menu" class="p-nav-drawer__link">メニュー</a></li>
+      <li><a href="#gallery" class="p-nav-drawer__link">ギャラリー</a></li>
+      <li><a href="#staff" class="p-nav-drawer__link">スタッフ</a></li>
+      <li><a href="#info" class="p-nav-drawer__link">店舗情報</a></li>
+      <li><a href="#contact" class="p-nav-drawer__link">お問い合わせ</a></li>
+    </ul>
+
+    <a href="https://www.instagram.com/thecornercafe/" class="c-btn c-btn--primary" target="_blank" rel="noopener noreferrer">Instagramをフォローする</a>
+  </div>
+</nav>
+
+<main id="main-content" role="main">
+
+  <!-- ========== SECTION: Hero ========== -->
+  <section class="p-hero" aria-labelledby="hero-title">
+    <div class="p-hero__bg" aria-hidden="true">
+      <img src="assets/images/placeholder-hero.jpg" alt="THE CORNER CAFEの店内 — 自家焙煎コーヒーが香る渋谷・神宮前の街角カフェ" class="p-hero__bg-img" loading="eager" fetchpriority="high" width="1920" height="1080">
+    </div>
+    <div class="l-container p-hero__content">
+      <span class="c-section-label c-section-label--light">SINCE 2021 — ROASTERY &amp; CAFÉ</span>
+      <h1 id="hero-title" class="p-hero__title">ここにくると、ほっとする。</h1>
+      <p class="p-hero__sub">自家焙煎の香りが漂う、街角の小さなカフェ。丁寧に淹れた一杯と、手作りのスイーツで、今日の疲れをそっとほぐします。あなたの毎日に、ちょっとした豊かさを。</p>
+      <div class="p-hero__cta">
+        <a href="https://www.instagram.com/thecornercafe/" class="c-btn c-btn--primary" target="_blank" rel="noopener noreferrer">Instagramを見る</a>
+        <a href="#contact" class="c-btn c-btn--ghost-white">お店に来てみる</a>
+      </div>
+    </div>
+    <div class="c-scroll-indicator" aria-hidden="true">
+      <span class="c-scroll-indicator__text">SCROLL</span>
+      <span class="c-scroll-indicator__line"></span>
+    </div>
+  </section>
+
+  <!-- ========== SECTION: Concept ========== -->
+  <section id="concept" class="p-concept" aria-labelledby="concept-title">
+    <div class="l-container">
+      <span class="c-section-label reveal">OUR STORY</span>
+      <h2 id="concept-title" class="c-section-title reveal">私たちが大切にしていること</h2>
+
+      <div class="p-concept__grid">
+        <div class="p-concept__image-wrapper reveal">
+          <img src="assets/images/placeholder-concept.jpg" alt="THE CORNER CAFEの自家焙煎豆と温かみのある店内インテリア" loading="lazy" width="600" height="450">
+        </div>
+
+        <div class="p-concept__body">
+          <p class="p-concept__lead reveal">THE CORNER CAFEが生まれたのは、「毎日来たくなるカフェをつくりたい」というシンプルな想いから。素材の選び方、焙煎の時間、スイーツの配合。どれひとつとっても、手を抜かず向き合ってきました。特別な日じゃなくていい。仕事帰りの一息でも、週末の朝の時間でも。ここに来るたびに、「また来てよかった」と思ってもらえるように、今日も丁寧に準備しています。</p>
+
+          <ul class="p-concept__points" role="list">
+            <li class="p-concept__point reveal reveal--delay-1">
+              <h3 class="p-concept__point-title">自家焙煎だから出せる、香りと味わい</h3>
+              <p class="p-concept__point-text">コーヒー豆は産地ごとに焙煎度合いを変え、豆本来の個性を引き出しています。焙煎したてのコーヒーは、香りも味もまるで違う。その感動を、毎日お届けしたくて。一杯ごとに丁寧に抽出し、いつ来ても「おいしい」と感じてもらえる一杯を目指しています。</p>
+            </li>
+            <li class="p-concept__point reveal reveal--delay-2">
+              <h3 class="p-concept__point-title">毎朝仕込む、手作りスイーツ</h3>
+              <p class="p-concept__point-text">スイーツはすべて、その日の朝にキッチンで手作りしています。季節の素材を取り入れながら、甘すぎず、コーヒーと寄り添う味わいに仕上げました。添加物や保存料は使わず、素材の味をそのまま活かしたやさしい甘さです。</p>
+            </li>
+            <li class="p-concept__point reveal reveal--delay-3">
+              <h3 class="p-concept__point-title">ゆっくり過ごせる、居心地のよさ</h3>
+              <p class="p-concept__point-text">読書をしても、ノートパソコンを開いても、ただぼんやりしていても、居心地がいい空間を大切にしています。木のあたたかみと、さりげなく流れる音楽。ここに来ると、自然と肩の力が抜けてくる。そんな場所であり続けるために、スタッフ一同、心を込めて迎えています。</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION: Menu ========== -->
+  <section id="menu" class="p-menu p-menu--bg" aria-labelledby="menu-title">
+    <div class="l-container">
+      <span class="c-section-label c-section-label--light reveal">MENU</span>
+      <h2 id="menu-title" class="c-section-title c-section-title--light reveal">今日は、何にしますか。</h2>
+      <p class="p-menu__lead reveal">自家焙煎コーヒーと、毎朝手作りするスイーツ。どれも、ここでしか出会えない味です。</p>
+
+      <!-- Tab Navigation -->
+      <div class="p-menu__tabs" role="tablist" aria-label="メニューカテゴリ">
+        <button class="p-menu__tab is-active" type="button" role="tab" aria-selected="true" aria-controls="tab-panel-coffee" data-tab="coffee">コーヒー</button>
+        <button class="p-menu__tab" type="button" role="tab" aria-selected="false" aria-controls="tab-panel-sweets" data-tab="sweets">スイーツ</button>
+      </div>
+
+      <!-- Coffee Panel -->
+      <div id="tab-panel-coffee" class="p-menu__grid" role="tabpanel" aria-labelledby="tab-coffee" data-category="coffee">
+        <article class="c-card-menu reveal reveal--delay-1" data-category="coffee">
+          <div class="c-card-menu__image-wrapper">
+            <img src="assets/images/placeholder-coffee.jpg" alt="コーナーブレンド — 自家焙煎コーヒー ¥550" loading="lazy" width="400" height="300">
+            <span class="c-card-menu__tag">自家焙煎</span>
+          </div>
+          <div class="c-card-menu__body">
+            <h3 class="c-card-menu__name">コーナーブレンド</h3>
+            <p class="c-card-menu__desc">当店の定番。中深煎りのバランスのいいブレンドで、苦みと甘みが心地よく重なります。朝の一杯にも、午後のひとときにも。</p>
+            <p class="c-card-menu__price">¥550</p>
+          </div>
+        </article>
+
+        <article class="c-card-menu reveal reveal--delay-2" data-category="coffee">
+          <div class="c-card-menu__image-wrapper">
+            <img src="assets/images/placeholder-coffee.jpg" alt="シングルオリジン エチオピア — 自家焙煎コーヒー ¥680" loading="lazy" width="400" height="300">
+            <span class="c-card-menu__tag">自家焙煎</span>
+          </div>
+          <div class="c-card-menu__body">
+            <h3 class="c-card-menu__name">シングルオリジン エチオピア</h3>
+            <p class="c-card-menu__desc">フルーティーな香りと、紅茶を思わせるすっきりとした飲み口。コーヒーの奥深さに気づかせてくれる一杯です。</p>
+            <p class="c-card-menu__price">¥680</p>
+          </div>
+        </article>
+
+        <article class="c-card-menu reveal reveal--delay-3" data-category="coffee">
+          <div class="c-card-menu__image-wrapper">
+            <img src="assets/images/placeholder-coffee.jpg" alt="カフェラテ — 自家焙煎エスプレッソ使用 ¥620" loading="lazy" width="400" height="300">
+            <span class="c-card-menu__tag">自家焙煎</span>
+          </div>
+          <div class="c-card-menu__body">
+            <h3 class="c-card-menu__name">カフェラテ</h3>
+            <p class="c-card-menu__desc">自家焙煎のエスプレッソに、なめらかなスチームミルクをたっぷりと。ほっとする甘さとコクが、ゆったりした時間を演出します。</p>
+            <p class="c-card-menu__price">¥620</p>
+          </div>
+        </article>
+
+        <article class="c-card-menu reveal reveal--delay-4" data-category="coffee">
+          <div class="c-card-menu__image-wrapper">
+            <img src="assets/images/placeholder-coffee.jpg" alt="季節のスペシャルティ — 旬の産地の自家焙煎コーヒー ¥750〜" loading="lazy" width="400" height="300">
+            <span class="c-card-menu__tag">自家焙煎</span>
+          </div>
+          <div class="c-card-menu__body">
+            <h3 class="c-card-menu__name">季節のスペシャルティ</h3>
+            <p class="c-card-menu__desc">旬の産地から仕入れたコーヒー豆を、その日のおすすめの抽出方法でご提供。詳しくは店頭でお声がけください。</p>
+            <p class="c-card-menu__price">¥750〜</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Sweets Panel: Fix 2 — removed u-hidden class, added hidden attribute -->
+      <div id="tab-panel-sweets" class="p-menu__grid" role="tabpanel" aria-labelledby="tab-sweets" data-category="sweets" hidden>
+        <article class="c-card-menu reveal reveal--delay-1" data-category="sweets">
+          <div class="c-card-menu__image-wrapper">
+            <img src="assets/images/placeholder-sweets.jpg" alt="バスクチーズケーキ — 毎朝焼き上げる手作りスイーツ ¥550" loading="lazy" width="400" height="300">
+            <span class="c-card-menu__tag">手作り</span>
+          </div>
+          <div class="c-card-menu__body">
+            <h3 class="c-card-menu__name">バスクチーズケーキ</h3>
+            <p class="c-card-menu__desc">外はほんのり焦げ目、中はとろりとなめらか。毎朝焼き上げる、当店一番人気のケーキです。</p>
+            <p class="c-card-menu__price">¥550</p>
+          </div>
+        </article>
+
+        <article class="c-card-menu reveal reveal--delay-2" data-category="sweets">
+          <div class="c-card-menu__image-wrapper">
+            <img src="assets/images/placeholder-sweets.jpg" alt="季節のタルト — 旬のフルーツを使った手作りスイーツ ¥600" loading="lazy" width="400" height="300">
+            <span class="c-card-menu__tag">手作り</span>
+          </div>
+          <div class="c-card-menu__body">
+            <h3 class="c-card-menu__name">季節のタルト</h3>
+            <p class="c-card-menu__desc">旬のフルーツをたっぷりのせた、サクサクのタルト。素材の味を大切に、甘さひかえめに仕上げています。</p>
+            <p class="c-card-menu__price">¥600</p>
+          </div>
+        </article>
+
+        <article class="c-card-menu reveal reveal--delay-3" data-category="sweets">
+          <div class="c-card-menu__image-wrapper">
+            <img src="assets/images/placeholder-sweets.jpg" alt="自家製スコーン（2個セット） — クロテッドクリーム添え手作りスイーツ ¥480" loading="lazy" width="400" height="300">
+            <span class="c-card-menu__tag">手作り</span>
+          </div>
+          <div class="c-card-menu__body">
+            <h3 class="c-card-menu__name">自家製スコーン（2個セット）</h3>
+            <p class="c-card-menu__desc">外はカリッ、中はふんわり。クロテッドクリームと自家製ジャムを添えて。午後のティータイムにぴったりです。</p>
+            <p class="c-card-menu__price">¥480</p>
+          </div>
+        </article>
+
+        <article class="c-card-menu reveal reveal--delay-4" data-category="sweets">
+          <div class="c-card-menu__image-wrapper">
+            <img src="assets/images/placeholder-sweets.jpg" alt="抹茶テリーヌ — 濃厚抹茶の手作りスイーツ ¥520" loading="lazy" width="400" height="300">
+            <span class="c-card-menu__tag">手作り</span>
+          </div>
+          <div class="c-card-menu__body">
+            <h3 class="c-card-menu__name">抹茶テリーヌ</h3>
+            <p class="c-card-menu__desc">濃厚な抹茶の風味と、なめらかな食感が後を引く一品。コーヒーとも相性抜群で、セットがおすすめです。</p>
+            <p class="c-card-menu__price">¥520</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="p-menu__more reveal">
+        <a href="https://www.instagram.com/thecornercafe/" class="c-link-icon" target="_blank" rel="noopener noreferrer">もっとメニューを見る →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION: Gallery ========== -->
+  <section id="gallery" class="p-gallery" aria-labelledby="gallery-title">
+    <div class="l-container">
+      <span class="c-section-label reveal">GALLERY</span>
+      <h2 id="gallery-title" class="c-section-title reveal">毎日のコーヒー時間を、もっと豊かに。</h2>
+      <p class="p-gallery__lead reveal">お客さまと一緒につくる、THE CORNER CAFEの日常です。</p>
+
+      <div class="p-gallery__grid">
+        <div class="p-gallery__item p-gallery__item--featured reveal">
+          <a href="https://www.instagram.com/thecornercafe/" class="p-gallery__link" target="_blank" rel="noopener noreferrer" aria-label="Instagramでギャラリーを見る">
+            <img src="assets/images/placeholder-gallery.jpg" alt="THE CORNER CAFEのコーヒーと空間 #thecornercafe" loading="lazy" width="800" height="600">
+          </a>
+        </div>
+        <div class="p-gallery__item reveal reveal--delay-1">
+          <a href="https://www.instagram.com/thecornercafe/" class="p-gallery__link" target="_blank" rel="noopener noreferrer" aria-label="Instagramでギャラリーを見る">
+            <img src="assets/images/placeholder-gallery.jpg" alt="THE CORNER CAFEの手作りスイーツ #thecornercafe" loading="lazy" width="400" height="400">
+          </a>
+        </div>
+        <div class="p-gallery__item reveal reveal--delay-2">
+          <a href="https://www.instagram.com/thecornercafe/" class="p-gallery__link" target="_blank" rel="noopener noreferrer" aria-label="Instagramでギャラリーを見る">
+            <img src="assets/images/placeholder-gallery.jpg" alt="THE CORNER CAFEの自家焙煎コーヒー豆 #thecornercafe" loading="lazy" width="400" height="400">
+          </a>
+        </div>
+        <div class="p-gallery__item reveal reveal--delay-3">
+          <a href="https://www.instagram.com/thecornercafe/" class="p-gallery__link" target="_blank" rel="noopener noreferrer" aria-label="Instagramでギャラリーを見る">
+            <img src="assets/images/placeholder-gallery.jpg" alt="THE CORNER CAFEの落ち着いたカフェ空間 #thecornercafe" loading="lazy" width="400" height="400">
+          </a>
+        </div>
+        <div class="p-gallery__item reveal reveal--delay-4">
+          <a href="https://www.instagram.com/thecornercafe/" class="p-gallery__link" target="_blank" rel="noopener noreferrer" aria-label="Instagramでギャラリーを見る">
+            <img src="assets/images/placeholder-gallery.jpg" alt="THE CORNER CAFEの季節のドリンク #thecornercafe" loading="lazy" width="400" height="400">
+          </a>
+        </div>
+        <div class="p-gallery__item reveal reveal--delay-4">
+          <a href="https://www.instagram.com/thecornercafe/" class="p-gallery__link" target="_blank" rel="noopener noreferrer" aria-label="Instagramでギャラリーを見る">
+            <img src="assets/images/placeholder-gallery.jpg" alt="THE CORNER CAFEのラテアート #thecornercafe" loading="lazy" width="400" height="400">
+          </a>
+        </div>
+      </div>
+
+      <div class="p-gallery__cta reveal">
+        <a href="https://www.instagram.com/thecornercafe/" class="c-btn c-btn--primary" target="_blank" rel="noopener noreferrer">@thecornercafe をフォローする</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION: Testimonials ========== -->
+  <section id="testimonials" class="p-testimonials p-testimonials--dark" aria-labelledby="testimonials-title">
+    <div class="l-container">
+      <span class="c-section-label c-section-label--light reveal">VOICE</span>
+      <h2 id="testimonials-title" class="c-section-title c-section-title--light reveal">また来たくなる、その理由。</h2>
+
+      <div class="p-testimonials__stats reveal">
+        <div class="p-testimonials__stat">
+          <span class="p-testimonials__stat-num">80%<span class="p-testimonials__stat-sup">以上</span></span>
+          <span class="p-testimonials__stat-label">リピーター率</span>
+        </div>
+        <div class="p-testimonials__stat">
+          <span class="p-testimonials__stat-num">5年</span>
+          <span class="p-testimonials__stat-label">地域密着の歴史</span>
+        </div>
+      </div>
+
+      <div class="p-testimonials__grid">
+        <article class="c-card-voice reveal reveal--delay-1">
+          <div class="c-card-voice__stars" aria-label="5つ星">
+            <svg width="100" height="20" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <text y="16" font-size="18" fill="#C9A96E">★★★★★</text>
+            </svg>
+          </div>
+          <blockquote class="c-card-voice__quote">
+            <p>仕事帰りに立ち寄るのが習慣になりました。コーナーブレンドの香りがすっと気持ちを落ち着かせてくれて、「ああ、今日も一日終わったな」という安心感があります。スタッフさんの接客もさりげなくて、余計な気を遣わなくていいのが好きです。バスクチーズケーキとのセットが、もう手放せません。</p>
+          </blockquote>
+          <cite class="c-card-voice__author">田中 さやか（28歳・会社員）</cite>
+        </article>
+
+        <article class="c-card-voice reveal reveal--delay-2">
+          <div class="c-card-voice__stars" aria-label="5つ星">
+            <svg width="100" height="20" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <text y="16" font-size="18" fill="#C9A96E">★★★★★</text>
+            </svg>
+          </div>
+          <blockquote class="c-card-voice__quote">
+            <p>週に2〜3回は来ています。作業がはかどるし、何より居心地がいい。ノートパソコンを広げていても、長居を急かされる空気がなくて助かります。季節ごとに変わるシングルオリジンを楽しみにしていて、先日のエチオピアは本当においしかった。こういうカフェがそばにあることが、日常のちょっとした幸せです。</p>
+          </blockquote>
+          <cite class="c-card-voice__author">松本 あかり（32歳・フリーランスデザイナー）</cite>
+        </article>
+
+        <article class="c-card-voice reveal reveal--delay-3">
+          <div class="c-card-voice__stars" aria-label="4つ星">
+            <svg width="100" height="20" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <text y="16" font-size="18" fill="#C9A96E">★★★★☆</text>
+            </svg>
+          </div>
+          <blockquote class="c-card-voice__quote">
+            <p>友達に連れてきてもらって以来、すっかりリピーターです。最初はInstagramの写真が気になって来たのですが、実際に飲んでみたらコーヒーのおいしさに驚きました。季節のタルトも毎回変わるのが楽しみで、来るたびに発見があります。勉強疲れに、ここでの一息が一番のごほうびになっています。</p>
+          </blockquote>
+          <cite class="c-card-voice__author">小川 みほ（25歳・大学院生）</cite>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION: FAQ ========== -->
+  <section id="faq" class="p-faq" aria-labelledby="faq-title">
+    <div class="l-container">
+      <span class="c-section-label reveal">FAQ</span>
+      <h2 id="faq-title" class="c-section-title reveal">よくあるご質問</h2>
+
+      <div class="p-faq__grid">
+        <div class="p-faq__lead reveal">
+          <p class="p-faq__lead-title" aria-hidden="true">よくあるご質問</p>
+          <p class="p-faq__lead-text">はじめての方も、常連の方も。気になることがあれば、いつでもお気軽にどうぞ。</p>
+        </div>
+
+        <div class="p-faq__list">
+          <div class="c-accordion reveal reveal--delay-1">
+            <button class="c-accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-1">
+              <span>一人でも気軽に入れますか？</span>
+              <svg class="c-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M5 8L10 13L15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="faq-1" class="c-accordion__panel" hidden>
+              <p>もちろんです。お一人のお客さまも多く、読書や作業をしながらゆっくり過ごされています。スタッフがさりげなくご案内しますので、どうぞお気軽にお越しください。</p>
+            </div>
+          </div>
+
+          <div class="c-accordion reveal reveal--delay-1">
+            <button class="c-accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-2">
+              <span>予約はできますか？</span>
+              <svg class="c-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M5 8L10 13L15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="faq-2" class="c-accordion__panel" hidden>
+              <p>通常のカフェ利用は予約不要です。席数に限りがありますので、お友達とのグループでご来店の際はお問い合わせフォームからご連絡いただけると助かります。</p>
+            </div>
+          </div>
+
+          <div class="c-accordion reveal reveal--delay-2">
+            <button class="c-accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-3">
+              <span>ノートパソコンや作業をしてもいいですか？</span>
+              <svg class="c-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M5 8L10 13L15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="faq-3" class="c-accordion__panel" hidden>
+              <p>はい、ご利用いただけます。Wi-Fiと電源コンセントをご用意しています。混雑時はご配慮いただけると嬉しいですが、基本的にゆっくりお過ごしください。</p>
+            </div>
+          </div>
+
+          <div class="c-accordion reveal reveal--delay-2">
+            <button class="c-accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-4">
+              <span>テイクアウトはできますか？</span>
+              <svg class="c-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M5 8L10 13L15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="faq-4" class="c-accordion__panel" hidden>
+              <p>ドリンクのテイクアウトに対応しています。お急ぎの方も、ぜひお気軽にどうぞ。スイーツのテイクアウトは一部商品のみとなります。</p>
+            </div>
+          </div>
+
+          <div class="c-accordion reveal reveal--delay-3">
+            <button class="c-accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-5">
+              <span>コーヒーの豆だけ買えますか？</span>
+              <svg class="c-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M5 8L10 13L15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="faq-5" class="c-accordion__panel" hidden>
+              <p>はい、自家焙煎の豆をグラム販売しています。お好みの焙煎度や飲み方をスタッフにお伝えいただければ、ご自宅でも美味しく楽しめる豆をご提案します。</p>
+            </div>
+          </div>
+
+          <div class="c-accordion reveal reveal--delay-3">
+            <button class="c-accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-6">
+              <span>アレルギーへの対応はしていますか？</span>
+              <svg class="c-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M5 8L10 13L15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="faq-6" class="c-accordion__panel" hidden>
+              <p>スイーツには小麦・乳・卵・ナッツ類を使用しているものがございます。アレルギーのあるお客さまは、ご注文時にスタッフへお申し付けください。できる限り対応いたします。</p>
+            </div>
+          </div>
+
+          <div class="c-accordion reveal reveal--delay-4">
+            <button class="c-accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-7">
+              <span>子ども連れでも入れますか？</span>
+              <svg class="c-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M5 8L10 13L15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="faq-7" class="c-accordion__panel" hidden>
+              <p>はい、お子さまとご一緒にお越しいただけます。お子さま向けのホットミルクやりんごジュースもご用意しています。ベビーカーでのご来店も大丈夫ですので、遠慮なくどうぞ。</p>
+            </div>
+          </div>
+
+          <div class="c-accordion reveal reveal--delay-4">
+            <button class="c-accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-8">
+              <span>駐車場はありますか？</span>
+              <svg class="c-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M5 8L10 13L15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="faq-8" class="c-accordion__panel" hidden>
+              <p>店舗専用の駐車場はございませんが、近隣にコインパーキングが複数ございます。最寄り駅から徒歩5分ですので、電車でのご来店も便利です。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION: Staff ========== -->
+  <section id="staff" class="p-staff p-staff--bg" aria-labelledby="staff-title">
+    <div class="l-container">
+      <span class="c-section-label c-section-label--light reveal">OUR TEAM</span>
+      <h2 id="staff-title" class="c-section-title c-section-title--light reveal">スタッフ紹介</h2>
+      <p class="p-staff__lead reveal">THE CORNER CAFEは、コーヒーとスイーツを心から愛するスタッフが運営しています。顔が見える場所で、毎日丁寧にお迎えしています。</p>
+
+      <div class="p-staff__grid">
+        <article class="c-card-staff reveal reveal--delay-1">
+          <div class="c-card-staff__image-wrapper">
+            <img src="assets/images/staff-1.jpg" alt="THE CORNER CAFE スタッフ 中村 健太 — 店長・焙煎士" loading="lazy" width="120" height="120">
+          </div>
+          <div class="c-card-staff__body">
+            <h3 class="c-card-staff__name">中村 健太<span class="c-card-staff__name-ruby">なかむら けんた</span></h3>
+            <p class="c-card-staff__role">店長・焙煎士</p>
+            <p class="c-card-staff__bio">コーヒーに魅了されて20代でバリスタの道へ。専門店での修行を経て、自家焙煎の技術を身につけました。「豆の個性を引き出す焙煎」を追求し続け、産地や農家とのつながりも大切にしています。お客さまが「また来たい」と思える場所をつくることが、毎日の原動力です。</p>
+          </div>
+        </article>
+
+        <article class="c-card-staff reveal reveal--delay-2">
+          <div class="c-card-staff__image-wrapper">
+            <img src="assets/images/staff-2.jpg" alt="THE CORNER CAFE スタッフ 佐藤 ゆき — パティシエ" loading="lazy" width="120" height="120">
+          </div>
+          <div class="c-card-staff__body">
+            <h3 class="c-card-staff__name">佐藤 ゆき<span class="c-card-staff__name-ruby">さとう ゆき</span></h3>
+            <p class="c-card-staff__role">パティシエ</p>
+            <p class="c-card-staff__bio">製菓専門学校を卒業後、都内のパティスリーで経験を積み、THE CORNER CAFEに参加。スイーツはすべて毎朝手作りで仕込んでいます。「コーヒーの邪魔をしない、でも主役にもなれる甘さ」にこだわり、季節ごとに新しいレシピを開発しています。</p>
+          </div>
+        </article>
+
+        <article class="c-card-staff reveal reveal--delay-3">
+          <div class="c-card-staff__image-wrapper">
+            <img src="assets/images/staff-3.jpg" alt="THE CORNER CAFE スタッフ 林 まいこ — バリスタ・ホールスタッフ" loading="lazy" width="120" height="120">
+          </div>
+          <div class="c-card-staff__body">
+            <h3 class="c-card-staff__name">林 まいこ<span class="c-card-staff__name-ruby">はやし まいこ</span></h3>
+            <p class="c-card-staff__role">バリスタ・ホールスタッフ</p>
+            <p class="c-card-staff__bio">笑顔とさりげない気配りで、お客さまに心地よい時間を届けています。コーヒーの知識を日々深めながら、一杯一杯を丁寧に仕上げることを大切にしています。「また来たくなった」という言葉が、何より嬉しいです。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION: Store Info ========== -->
+  <section id="info" class="p-store-info" aria-labelledby="info-title">
+    <div class="l-container">
+      <span class="c-section-label reveal">ACCESS</span>
+      <h2 id="info-title" class="c-section-title reveal">店舗情報</h2>
+
+      <div class="p-store-info__grid">
+        <div class="p-store-info__details reveal">
+          <dl class="p-store-info__table">
+            <div class="p-store-info__row">
+              <dt class="p-store-info__dt">住所</dt>
+              <dd class="p-store-info__dd">〒150-0001 東京都<span itemprop="addressRegion">渋谷区</span><span itemprop="addressLocality">神宮前</span>2丁目14-8 コーナービル 1F</dd>
+            </div>
+            <div class="p-store-info__row">
+              <dt class="p-store-info__dt">営業時間</dt>
+              <dd class="p-store-info__dd">
+                月曜定休<br>
+                火〜金 8:00〜20:00<br>
+                土・日 9:00〜19:00<br>
+                <small>（ラストオーダー閉店30分前）</small>
+              </dd>
+            </div>
+            <div class="p-store-info__row">
+              <dt class="p-store-info__dt">定休日</dt>
+              <dd class="p-store-info__dd">毎週月曜日（祝日の場合は翌火曜日）</dd>
+            </div>
+            <div class="p-store-info__row">
+              <dt class="p-store-info__dt">電話</dt>
+              <dd class="p-store-info__dd"><a href="tel:0345678901">03-4567-8901</a></dd>
+            </div>
+            <div class="p-store-info__row">
+              <dt class="p-store-info__dt">アクセス</dt>
+              <dd class="p-store-info__dd">
+                JR原宿駅 徒歩5分<br>
+                東京メトロ明治神宮前駅 徒歩3分
+              </dd>
+            </div>
+          </dl>
+
+          <a href="https://maps.google.com/?q=東京都渋谷区神宮前2丁目14-8" class="c-btn c-btn--secondary" target="_blank" rel="noopener noreferrer">Googleマップで開く</a>
+        </div>
+
+        <div class="p-store-info__map reveal">
+          <!-- Fix 7: added class="p-store-info__map-frame" -->
+          <iframe
+            class="p-store-info__map-frame"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.186682!2d139.7025!3d35.6647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E7%A5%9E%E5%AE%AE%E5%89%8D2%E4%B8%81%E7%9B%AE14-8!5e0!3m2!1sja!2sjp!4v1"
+            title="THE CORNER CAFE — 東京都渋谷区神宮前2丁目14-8の地図"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION: Contact ========== -->
+  <section id="contact" class="p-contact" aria-labelledby="contact-title">
+    <div class="l-container">
+      <span class="c-section-label reveal">CONTACT</span>
+      <h2 id="contact-title" class="c-section-title reveal">お問い合わせ</h2>
+      <p id="contact-lead" class="p-contact__lead reveal">ご来店前のご質問や、貸し切りのご相談など、お気軽にメッセージをお送りください。通常2営業日以内にご返信します。</p>
+
+      <div class="p-contact__wrapper reveal">
+        <form id="contact-form" class="p-contact__form" action="php/form_handler.php" method="POST" novalidate aria-describedby="contact-lead">
+          <!-- CSRF Token (PHP側で出力) -->
+          <input type="hidden" name="csrf_token" value="">
+
+          <!-- Honeypot -->
+          <div class="u-hidden" aria-hidden="true">
+            <label>空欄のままにしてください<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <!-- Field: Name -->
+          <div class="p-contact__field">
+            <label for="contact-name" class="p-contact__label">お名前 <span class="p-contact__required" aria-label="必須">必須</span></label>
+            <input
+              id="contact-name"
+              class="p-contact__input"
+              type="text"
+              name="name"
+              placeholder="田中 さやか"
+              required
+              maxlength="100"
+              autocomplete="name"
+              aria-required="true"
+              aria-describedby="name-error">
+            <span id="name-error" class="p-contact__field-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Field: Email -->
+          <div class="p-contact__field">
+            <label for="contact-email" class="p-contact__label">メールアドレス <span class="p-contact__required" aria-label="必須">必須</span></label>
+            <input
+              id="contact-email"
+              class="p-contact__input"
+              type="email"
+              name="email"
+              placeholder="example@email.com"
+              required
+              maxlength="254"
+              autocomplete="email"
+              aria-required="true"
+              aria-describedby="email-error">
+            <span id="email-error" class="p-contact__field-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Field: Message -->
+          <div class="p-contact__field">
+            <label for="contact-message" class="p-contact__label">お問い合わせ内容 <span class="p-contact__required" aria-label="必須">必須</span></label>
+            <textarea
+              id="contact-message"
+              class="p-contact__textarea"
+              name="message"
+              placeholder="ご質問・ご要望をご記入ください"
+              required
+              rows="6"
+              maxlength="2000"
+              aria-required="true"
+              aria-describedby="message-error"></textarea>
+            <span id="message-error" class="p-contact__field-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="c-btn c-btn--primary c-btn--full">送信する</button>
+        </form>
+
+        <!-- Success Message -->
+        <div id="form-success" class="p-contact__success" role="alert" aria-live="polite" hidden>
+          お問い合わせありがとうございます。内容を確認のうえ、2営業日以内にご連絡いたします。しばらくお待ちください。
+        </div>
+
+        <!-- Error Message -->
+        <div id="form-error" class="p-contact__error" role="alert" aria-live="polite" hidden>
+          送信に失敗しました。しばらくしてから再度お試しください。
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ========== SECTION: Footer ========== -->
+<footer class="p-footer" role="contentinfo">
+  <div class="l-container p-footer__inner">
+    <div class="p-footer__brand">
+      <p class="p-footer__logo">THE CORNER CAFE</p>
+      <p class="p-footer__tagline">ここにくると、ほっとする。— THE CORNER CAFE</p>
+    </div>
+
+    <nav class="p-footer__nav-wrapper" aria-label="フッターナビゲーション">
+      <ul class="p-footer__nav">
+        <li><a href="#concept" class="p-footer__nav-link">こだわり</a></li>
+        <li><a href="#menu" class="p-footer__nav-link">メニュー</a></li>
+        <li><a href="#gallery" class="p-footer__nav-link">ギャラリー</a></li>
+        <li><a href="#staff" class="p-footer__nav-link">スタッフ</a></li>
+        <li><a href="#info" class="p-footer__nav-link">店舗情報</a></li>
+        <li><a href="#contact" class="p-footer__nav-link">お問い合わせ</a></li>
+      </ul>
+    </nav>
+
+    <div class="p-footer__sns">
+      <a href="https://www.instagram.com/thecornercafe/" class="p-footer__sns-link" target="_blank" rel="noopener noreferrer" aria-label="THE CORNER CAFEのInstagramを見る">
+        <svg class="p-footer__sns-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+          <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+        </svg>
+        @thecornercafe を見る
+      </a>
+    </div>
+
+    <div class="p-footer__map-link">
+      <a href="https://maps.google.com/?q=東京都渋谷区神宮前2丁目14-8" class="p-footer__text-link" target="_blank" rel="noopener noreferrer">Googleマップで場所を見る</a>
+    </div>
+  </div>
+
+  <div class="p-footer__bottom">
+    <div class="l-container p-footer__bottom-inner">
+      <small class="p-footer__copyright">&copy; 2024 THE CORNER CAFE. All rights reserved.</small>
+      <span class="p-footer__since">Since 2021</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Script -->
+<script src="assets/js/script.js" defer></script>
+
+</body>
+</html>
