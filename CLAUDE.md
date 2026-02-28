@@ -369,6 +369,33 @@ Utility     : u-mt-16 / u-text-center / u-hidden        （プレフィックス
 - Modifier は `c-button--primary` のようにダブルハイフン
 - 状態変化は `is-active` / `is-open` / `is-error` のように `is-` プレフィックス
 
+### モバイルナビの HTML 配置ルール（Phase 5 必須）
+
+フルスクリーン型のモバイルナビは **`<header>` の外（兄弟要素）に配置する**こと。
+
+```html
+<!-- ✅ 正しい: nav は header の外（兄弟） -->
+<header class="l-header">          <!-- z-index: 1000 -->
+  <div class="l-header__inner">
+    <a class="l-header__logo">...</a>
+    <button class="js-hamburger">...</button>
+  </div>
+</header>
+<nav class="c-nav" id="js-nav">   <!-- z-index: 999 → ページ上に正しく表示 -->
+  ...
+</nav>
+
+<!-- ❌ 間違い: nav を header の内側に入れると stacking context に閉じ込められる -->
+<header class="l-header">         <!-- z-index: 1000 の stacking context -->
+  <nav class="c-nav">             <!-- この中に閉じ込められ、ページより上に出られない -->
+  </nav>
+</header>
+```
+
+**理由:** `l-header` は `position: fixed; z-index: 1000` で stacking context を作る。
+その内側の要素は、z-index がいくら高くても「header の層の中」に閉じ込められ、
+root stacking context のページコンテンツより上に出てこられない。
+
 ### クラス名整合性ルール（Phase 5〜6 必須）
 HTMLデザイナーが確定させたクラス名が「唯一の真実」。
 CSS・JSはそのクラス名に合わせる。クラス名の変更は HTML 側で行う。
