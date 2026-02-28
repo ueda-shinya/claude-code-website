@@ -180,6 +180,7 @@ Phase 3 完了後、Phase 4 に入る前に `03_copy.md` に禁止ワードが�
 - `assets/css/styles.css` と `assets/js/script.js` をリンク
 - フォームは `php/form_handler.php` へ POST
 - フォームの `<select>` や `<input>` の `name`/`value` 属性はバックエンドの処理と必ず一致させること
+- **チェックボックスの HTML 構造:** `width`/`height` 指定クラスは `<label>` ラッパーではなく `<input type="checkbox">` 自体に付ける（「CSSコンポーネント実装パターン」参照）
 
 > **コピー追加禁止:** `03_copy.md` に存在しないテキストを HTML に独自追加することは禁止。
 > どうしても必要な場合はコメントアウトで提案し、Phase 9 のオーケストレーターに判断を委ねる。
@@ -259,6 +260,10 @@ Phase 6 以降でファイル名が変わることはないため、ここで一
   - HTML に存在するが generate_images.py にない画像ファイル名を CRITICAL として報告
   - generate_images.py に定義されているが HTML から参照されていない（孤立した）エントリを WARNING として報告
   - CSS 背景画像（`background-image: url(...)` 等）も対象に含める
+- **【必須】UIコンポーネント動作チェック（以下を全て確認する）:**
+  - アコーディオン: `.accordion__panel` に `max-height: 0` による高さ制御があるか（`visibility: hidden` のみは NG）
+  - チェックボックス: `width`/`height` 指定クラスが `<label>` ではなく `<input>` 自体に付いているか
+  - `min-height` フォールバック: フォールバック値（px）が先、モダンな値（svh等）が後の順になっているか
 - 問題点を 🔴CRITICAL / 🟡WARNING / 🟢INFO で分類
 
 **QA** (`workspace/08_review_qa.md`)
@@ -367,6 +372,57 @@ Utility     : u-mt-16 / u-text-center / u-hidden        （プレフィックス
 ### クラス名整合性ルール（Phase 5〜6 必須）
 HTMLデザイナーが確定させたクラス名が「唯一の真実」。
 CSS・JSはそのクラス名に合わせる。クラス名の変更は HTML 側で行う。
+
+### CSSコンポーネント実装パターン（Phase 6 必須）
+
+よく誤る実装パターンを以下に示す。必ずこのパターンに従うこと。
+
+**アコーディオンの開閉アニメーション**
+`visibility: hidden` は要素を不可視にするだけで**高さは維持される**。
+パネルを物理的に折りたたむには `max-height` による制御が必須。
+
+```css
+/* ✅ 正しい実装 */
+.c-accordion__panel {
+  overflow: hidden;
+  max-height: 0;           /* 閉じた状態: 高さ0 */
+  transition: max-height 0.3s ease;
+}
+.c-accordion.is-open .c-accordion__panel {
+  max-height: 600px;       /* 開いた状態: コンテンツより大きな値 */
+}
+
+/* ❌ 間違い: visibility: hidden だけでは高さが残り、空白が生まれる */
+```
+
+**チェックボックス + ラベルの HTML 構造**
+`width`/`height` を指定するクラスは必ず `<input>` 要素自体に付ける。
+`<label>` ラッパーに付けると、日本語テキストが `word-break: break-all` と組み合わさって縦一列になる。
+
+```html
+<!-- ✅ 正しい: input に width/height クラスを付ける -->
+<input type="checkbox" id="privacy" class="c-form__check">
+<label for="privacy" class="c-form__check-label">プライバシーポリシーに同意する</label>
+
+<!-- ❌ 間違い: label ラッパーがサイズ制限を受け、内部テキストが縦列になる -->
+<label class="c-form__check">
+  <input type="checkbox">
+  <span>プライバシーポリシーに同意する</span>
+</label>
+```
+
+**CSS フォールバックの記述順**
+「古いブラウザ用の値 → 新しいブラウザ用の値」の順で書く。逆にするとモダンな値が無効になる。
+
+```css
+/* ✅ 正しい: フォールバック → モダン の順 */
+min-height: 600px;   /* 古いブラウザ用フォールバック */
+min-height: 100svh;  /* 新しいブラウザで上書き */
+
+/* ❌ 間違い: 逆順では 100svh が常に 600px に上書きされて無効になる */
+min-height: 100svh;
+min-height: 600px;
+```
 
 ### 動的表示切替の統一ルール（Phase 5〜6 必須）
 要素の動的な表示・非表示は **`style="display:none"` + JS で `style.display = 'block'`** に統一する。

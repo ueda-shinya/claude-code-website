@@ -727,22 +727,18 @@ body.is-nav-open {
 
 .c-accordion__panel {
   overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+.c-accordion.is-open .c-accordion__panel {
+  max-height: 600px;
 }
 
 .c-accordion__answer {
   padding: 0 0 var(--space-5);
   color: var(--color-text-secondary);
   line-height: var(--leading-relaxed);
-  opacity: 0;
-  transform: translateY(-8px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  visibility: hidden;
-}
-
-.c-accordion.is-open .c-accordion__answer {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
 }
 
 /* c-form */
@@ -1004,8 +1000,8 @@ select.c-form__input {
 /* p-hero */
 .p-hero {
   position: relative;
-  min-height: 100svh;
   min-height: 600px; /* fallback */
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
