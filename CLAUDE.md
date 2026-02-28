@@ -309,6 +309,29 @@ convert_to_webp.py は HTML の `src="....jpg"` を `src="....webp"` に自動�
 **ファイル管理ルール**に従って納品物を `output/{案件名}/` に書き出す。
 `logs/.htaccess` と `README.md` も必ず作成する。
 
+**ステップ6 — ブラウザ動作確認（必須）**
+書き出した成果物を実際のブラウザで自動検証する。まず `pytest.ini` の `base_url` を今回の案件に更新する:
+```
+base_url = http://localhost/claude-code-website/output/{案件名}/
+```
+その後テストを実行する:
+```bash
+python -m pytest tests/test_generic.py -v --tb=short
+```
+※ XAMPP の Apache が起動していること。
+
+テスト内容（全 16 件）:
+- ページ HTTP 200 / タイトル / h1 / meta description / OGP タグ
+- CSS・JS ファイルの読み込み成功
+- 全画像の読み込み（lazy-load を含む）/ alt 属性の存在
+- モバイル (375px) / タブレット (768px) での横スクロールなし
+- JavaScript コンソールエラーなし
+- フォームの Honeypot 非表示 / 空送信ブロック
+- スキップナビ / lang 属性の存在
+
+**全テストがグリーンになってから納品すること。**
+失敗があれば原因を特定して修正し、再度テストを通過させる。
+
 ---
 
 ## 役割のRACIルール
